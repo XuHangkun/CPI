@@ -31,7 +31,7 @@ def main():
     parser.add_argument('--save_per_steps', type=int,default=300)
     parser.add_argument('--pretrained_model',default=None)
     parser.add_argument('--pretrained_info',default=None)
-    parser.add_argument('--model_name',default="transformercpi")
+    parser.add_argument('--model_name',default="transformercpi",choices=["normaltransformer","mixtransformer","chembertmixtransformer","chembertprotbertbaseline","baseline"])
     parser.add_argument('--model_path',default="../model/baseline_model.pkl")
     parser.add_argument('--train_info_path',default="../model/train_info.csv")
     parser.add_argument('--valid_info_path',default="../model/valid_info.csv")
@@ -57,7 +57,7 @@ def main():
     print(args)
 
     # Set Seed
-    if 7 is not None:
+    if args.seed is not None:
         print("Set random seed ")
         torch.manual_seed(args.seed)
         torch.backends.cudnn.benchmark = False
