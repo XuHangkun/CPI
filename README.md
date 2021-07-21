@@ -28,7 +28,9 @@ use deep learning to predict the possibility of compound and protein interaction
 ## **Train and Test Model**
 ## Train the model
 ```bash
-$ # you can find the the train scripts in directory scripts
+$ # you can find the the train scripts in directory scripts.
+$ # if you want to use ChemBert or ProteinBert, you need to download the pretrained model first.
+$ # I've put the link of the pretrained model at the directory ChemBERTa and prot_bert respectively.
 $ python run_train.py --model_name [baseline,transformercpi] --evt_num EVT_NUM
 ```
 
