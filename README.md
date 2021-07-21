@@ -46,7 +46,7 @@ $ python ./analysis/draw_train_info.py --input FILE_PATH
 ```
 
 ## **Author**
-- 许杭锟(Xu Hangkun)
+- 许杭锟(Xu Hangkun) [if you have problem, you cad add my wechat account MagicSci. I'am glad to communicate!]
 
 ## **Reference**
 - Lifan Chen, Xiaoqin Tan, Dingyan Wang, Feisheng Zhong, Xiaohong Liu, Tianbiao Yang, Xiaomin Luo, Kaixian Chen, Hualiang Jiang, Mingyue Zheng, TransformerCPI: improving compound–protein interaction prediction by sequence-based deep learning with self-attention mechanism and label reversal experiments, Bioinformatics, Volume 36, Issue 16, 15 August 2020, Pages 4406–4414, https://doi.org/10.1093/bioinformatics/btaa524
