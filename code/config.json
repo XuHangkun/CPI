@@ -1,0 +1,72 @@
+{
+    "model_type": "TensorFlow",
+    "model_algorithm": "chemical competition",
+    "runtime": "rdkit-release_2020.09.1",
+    "apis": [{
+        "protocol": "http",
+        "url": "/",
+        "method": "post",
+        "request": {
+            "Content-type": "application/json",
+            "data": {
+                "type": "object",
+				"properties": {
+                    "id": {
+                        "type": "string",
+                        "index": 0
+                    },
+                    "smiles": {
+                        "type": "string",
+                        "index": 1
+                    },
+					"protein": {
+                        "type": "string",
+                        "index": 2
+                    }
+                }
+            }
+        },
+        "response": {
+            "Content-type": "application/json",
+            "data": {
+                "type": "object",
+                "properties": {
+                    "prob": {
+                        "type": "float"
+                    }
+                }
+            }
+        }
+    }],
+    "dependencies": [
+        {
+            "installer": "pip",
+            "packages": [
+                {
+                    "package_name": "torch",
+                    "package_version": "1.4.0",
+                    "restraint": "EXACT"
+                },
+                {
+                    "package_name": "gensim",
+                    "package_version": "4.0.1",
+                    "restraint": "ATLEAST"
+                },
+                {
+                    "package_name": "scipy"
+                },
+                {
+                    "package_name": "tqdm"
+                },
+                {
+                    "package_name": "transformers"
+                },
+                {
+                    "package_name": "tape_proteins"
+                }
+            ]
+        }
+    ]
+	
+}
+
